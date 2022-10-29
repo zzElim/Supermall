@@ -6,6 +6,7 @@ const Home = () => import('../views/home/Home.vue')
 const Category = () => import('../views/category/Category.vue')
 const Cart = () => import('../views/cart/Cart.vue')
 const Profile = () => import('../views/profile/Profile.vue')
+const Detail = () => import('../views/detail/Detail.vue')
 
 //安装插件 
 // Vue.use(VueRouter)  //这是vue2的  vue3用不了
@@ -32,7 +33,10 @@ const routes = [
   {
     path: '/profile',
     component: Profile
-  },
+  }, {
+    path: '/detail/:iid',
+    component: Detail
+  }
 
 
 
@@ -41,7 +45,8 @@ const routes = [
 const router = createRouter({
   routes,
   history: createWebHashHistory(),
-  mode: 'history'
+  mode: 'history',
+
 
 
 })

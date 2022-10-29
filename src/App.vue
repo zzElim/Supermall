@@ -1,7 +1,14 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <!-- vue3 的keep-alive写法 -->
+    <router-view v-slot="{ Component }">
+  <keep-alive >
+    <component :is="Component" />
+  </keep-alive>
+</router-view>
+
     <MainTabbar></MainTabbar>
+    
   </div>
  
 </template>
@@ -10,10 +17,12 @@
 import MainTabbar from './components/content/mainTabbar/MainTabbar.vue';
 
 
+
 export default {
   name: 'App',
   components: {
-    MainTabbar
+    MainTabbar,
+    
 
   }
 }

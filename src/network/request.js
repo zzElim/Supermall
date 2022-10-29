@@ -25,6 +25,7 @@ export function request(config) {
   }, err => {
 
   })
+
   //发送真正的网络请求******* 这是一个最完美最简单的方案
   return instance(config)
 }
