@@ -1,4 +1,5 @@
 import { request } from "./request";
+
 export function getDetail(iid) {
   return request({
     url: '/detail',
@@ -39,4 +40,11 @@ export class GoodsParam {
     this.infos = info.set;
     this.sizes = rule.tables;
   }
+}
+
+
+export function getRecommend() {
+  return request({
+    url: '/recommend'
+  })
 }

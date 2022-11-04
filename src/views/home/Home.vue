@@ -92,6 +92,7 @@ components: {
     this.$refs.scroll.scrollTo(0,this.saveY,0);
    },
    deactivated(){
+    //保存Y值
     this.saveY = this.$refs.scroll.scroll.y    
     // this.$refs.scroll.scroll.refresh()
 
